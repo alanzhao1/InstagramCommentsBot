@@ -56,5 +56,3 @@ docs/_build/
 # PyBuilder
 target/
 
-# Hide secrets
-src/tokens.py
