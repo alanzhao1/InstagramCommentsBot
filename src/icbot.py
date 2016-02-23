@@ -34,7 +34,7 @@ oauth_helper = PrawOAuth2Mini(reddit_client, app_key = app_key,
 icbotconn = sqlite3.connect(icbot.db)
 dbcursor = icbotconn.cursor()
 
-class Instagram_Comment:
+class InstagramComment:
 
     def __init__(self, comment_regex, comment_id):
         self.comment_regex = comment_regex
@@ -63,7 +63,7 @@ class ICBot:
         for comment in all_comments:
             comment_re = re.findall(INSTAGRAM_REGEX, str(comment.body))
             if len(comment_re) > 0
-                insta_comments.append(Instagram_Comment(comment_re, comment.id))
+                insta_comments.append(InstagramComment(comment_re, comment.id))
 
         for comment in insta_comments:
             if (str(comment.comment_id),) in dbcursor.execute("SELECT ID FROM reddit"):
