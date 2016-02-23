@@ -34,6 +34,19 @@ oauth_helper = PrawOAuth2Mini(reddit_client, app_key = app_key,
 icbotconn = sqlite3.connect(icbot.db)
 dbcursor = icbotconn.cursor()
 
+# Class containing instagram comment, id, instagram URL, rehosted imgur URL,
+# instagram post author
+# TODO: change InstagramComment class to use array of InstagramLink objects
+
+class InstagramLink:
+    
+    def __init__(self, media_id, insta_url, comment, author, imgur_url):
+        self.media_id = media_id
+        self.insta_link = insta_link
+        self.comment = comment
+        self.author = author
+
+# Class containing reddit comments with Instagram URLs
 class InstagramComment:
 
     def __init__(self, comment_regex, comment_id):
