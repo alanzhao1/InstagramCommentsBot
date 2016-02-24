@@ -13,6 +13,8 @@ from prawoauth2 import PrawOAuth2Mini
 from tokens import app_key, app_secret, access_token, refresh_token
 from settings import user_agent, scopes
 
+from imgurpython import ImgurClient
+
 from instagram.client import InstagramAPI
 from instagram.bind import InstagramAPIError
 
